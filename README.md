@@ -19,3 +19,7 @@ Clang:
 ```
 clang++ -o BogoSort.exe BogoSort.cpp
 ```
+
+---
+
+**Notice:** Only the playground is Windows specific.
