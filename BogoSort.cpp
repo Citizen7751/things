@@ -1,16 +1,7 @@
-/*----------------BogoSort------------------
-
-Compile with GCC:
-
-	Windows:
-	g++ -o bogosort.exe bogosort.cpp
-
-------------------------------------------*/
-
 #include <iostream>
 #include <windows.h>	//Sleep	
-#include <time.h>		//random -> time
-#include <stdlib.h>		//random
+#include <time.h>	//random -> time
+#include <stdlib.h>	//random
 #include <vector>
 
 typedef std::vector<double> dvec;
