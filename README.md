@@ -19,19 +19,3 @@ Clang:
 ```
 clang++ -o BogoSort.exe BogoSort.cpp
 ```
-
-
-## Compile on Linux
-
-
-GCC:
-
-```
-g++ -o BogoSort BogoSort.cpp
-```
-
-Clang:
-
-```
-clang++ -o BogoSort BogoSort.cpp
-```
