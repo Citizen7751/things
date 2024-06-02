@@ -6,7 +6,7 @@ This repo contains a playground called ```BogoSort.cpp``` and a ```readytouse```
 
 ---
 
-## Compile on Windows
+## Compile on Windows with GCC
 
 GCC:
 
@@ -14,12 +14,6 @@ GCC:
 g++ -o BogoSort.exe BogoSort.cpp
 ```
 
-Clang:
-
-```
-clang++ -o BogoSort.exe BogoSort.cpp
-```
-
 ---
 
-**Notice:** Only the playground is Windows-only.
+**Notice:** The playground is Windows-only.
