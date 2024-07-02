@@ -1,19 +1,19 @@
 # Description
 
-BogoSort is a joke sorting algorithm which just randomizes the list until it's sorted.
-This repo contains a playground called ```BogoSort.cpp``` and a ```readytouse``` folder to build it into other programs.
-*(Why ~~would~~ **wouldn't** you do that?)*
+BogoSort is a joke sorting algorithm that just randomizes the list until it's sorted.
 
 ---
 
-## Compile on Windows with GCC
+## Compile with GCC
 
-GCC:
+Windows:
 
 ```
-g++ -o BogoSort.exe BogoSort.cpp
+gcc -o BogoSort.exe BogoSort.c -s -O3
 ```
 
----
+Linux:
 
-**Notice:** The playground is Windows-only.
+```
+gcc -o BogoSort BogoSort.c -s -O3
+```
