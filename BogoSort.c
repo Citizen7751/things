@@ -44,11 +44,18 @@ void mix_elements(type* arr, uint* l) {
     }
 }
 
-void print_elements(type* arr, uint* l) {
+void print_elements_nl(type* arr, uint* l) {
     for (uint i=0; i<*l; i++)
         printf("%d ", arr[i]);
     putchar('\n');
 }
+
+void print_elements_cr(type* arr, uint* l) {
+    for (uint i=0; i<*l; i++)
+        printf("%d ", arr[i]);
+    putchar('\r');
+}
+
 
 //--------------------------------------------
 
@@ -56,7 +63,7 @@ void BogoSort_Verbose(type* arr, uint* l, uint* i) {
     while(!is_sorted(arr, l)) {
         mix_elements(arr, l);
         (*i)++;
-        print_elements(arr, l);
+        print_elements_cr(arr, l);
         Sleep(300);
     }
 }
@@ -75,6 +82,8 @@ int main(void) {
     type arr[] = {3, 8, 2, 1};
     uint length = sizeof(arr)/sizeof(arr[0]);
     uint iterations = 0;
+    printf("Original arrangement: ");
+    print_elements_nl(arr, &length);
 
     BogoSort_Verbose(arr, &length, &iterations);
     //BogoSort_Quiet(arr, &length, &iterations);
