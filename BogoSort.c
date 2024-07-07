@@ -82,7 +82,7 @@ int main(void) {
     type arr[] = {3, 8, 2, 1};
     uint length = sizeof(arr)/sizeof(arr[0]);
     uint iterations = 0;
-    printf("Original arrangement: ");
+    printf("Original arrangement:\n");
     print_elements_nl(arr, &length);
 
     BogoSort_Verbose(arr, &length, &iterations);
