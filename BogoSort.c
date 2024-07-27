@@ -1,3 +1,6 @@
+//MIT License
+//Copyright (c) 2024 Citizen7751
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
