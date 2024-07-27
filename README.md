@@ -9,3 +9,5 @@ Linux:
 ```
 gcc -o ./BogoSort ./BogoSort.c -s -O3
 ```
+---
+This software is under the MIT License.
