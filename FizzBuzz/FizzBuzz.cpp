@@ -40,7 +40,7 @@ void FizzBuzz() {
     std::vector<cnd> Conditions;
     add_conditions(Conditions);
 
-	//boundries set like this are always within the range of the loop
+//boundries set like this are always within the range of the loop
     for (int i = BEGIN; i != END+(PACE/abs(PACE)); i += PACE) {
         if (!check_and_print(Conditions, i)) std::cout << i;
         std::cout << '\n';
