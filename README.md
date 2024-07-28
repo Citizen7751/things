@@ -6,4 +6,4 @@ As a hobbyist programmer, sometimes I just really want to make something. Thanks
 - Bogosort - C
 - Scallable Fizzbuzz - C++
 ---
-All programms are under the MIT License.
+All programs are under the MIT License.
