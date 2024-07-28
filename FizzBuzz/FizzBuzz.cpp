@@ -1,10 +1,6 @@
 //MIT License
 //Copyright (c) 2024 Citizen7751
 
-// ----- Compile -----
-// Windows:g++ -o FizzBuzz.exe FizzBuzz.cpp -s -O3
-// Linux: g++ -o FizzBuzz FizzBuzz.cpp -s -O3
-
 #include <iostream> 
 #include <vector>
 #include <math.h>
