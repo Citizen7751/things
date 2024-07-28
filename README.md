@@ -1,4 +1,6 @@
+# BogoSort
 
+The famous joke sorting algorithm that just randomizes the list until it's sorted.
 
 ---
 ### Compile with GCC
