@@ -5,11 +5,11 @@ I saw a great and fairy scallable way to implement the famous Fizzbuzz game, so 
 ### Compile with GCC
 
 Windows
-´´´
+```
 g++ -o FizzBuzz.exe FizzBuzz.cpp -s -O3
-´´´
+```
 
 Linux
-´´´
+```
 g++ -o FizzBuzz FizzBuzz.cpp -s -O3
-´´´
+```
