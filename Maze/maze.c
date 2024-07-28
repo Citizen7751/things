@@ -5,11 +5,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SAFE_LENGTH			3
-#define STRETCH_RATIO		2       //stretching to look like a square
-#define KILLSWITCH			100
-#define PATH				' '
-#define WALL				'8'
+#define SAFE_LENGTH	3
+#define STRETCH_RATIO	2       //stretching to look like a square
+#define KILLSWITCH	100
+#define PATH		' '
+#define WALL		'8'
 
 typedef char** mtx;
 typedef unsigned int uint;
@@ -43,7 +43,7 @@ void maze_frame(mtx m, uint s) {		//outer walls, entrance & exit
 			if (x == 0 || x == s - 1 || y == 0 || y == s - 1)
 				m[x][y] = WALL;
 			else m[x][y] = PATH;
-	m[1][0] = m[s - 2][s - 1] = PATH;
+	m[1][0] = m[s-2][s-1] = PATH;
 }
 
 void print(mtx m, uint s) {
@@ -55,14 +55,14 @@ void print(mtx m, uint s) {
 	}
 }
 
-int random(int min, int max) {					//min & max included in the boundries
+int random(int min, int max) {			//min & max included in the boundries
 	return rand() % (max - min + 1) + min;
 }
 
 //------------------------------------------- Recursive Division ------------------------------------------
 
 void make_path(mtx m, uint start, uint length, uint wall_i, int v) {	// puts a hole into the wall
-	int path_i = random(start, start + length - 1);
+	int path_i = random(start, start+length-1);
 	(v ? (m[wall_i][path_i] = PATH) : (m[path_i][wall_i] = PATH));
 }
 
@@ -79,8 +79,8 @@ void RecDiv(mtx m, uint start_x, uint end_x, uint start_y, uint end_y, int v) {
 // if can't find and stucks in a infinite loop, the killswitch returns it after 100 trials
 	uint wall_i, sbound, ebound, tries = 0;
 	do {
-		wall_i = v ? random(start_x + 2, end_x - 2) : random(start_y + 2, end_y - 2);
-		sbound = v ? m[wall_i][start_y] : m[start_x][wall_i];	// checking wall boundries ->
+		wall_i = v ? random(start_x+2, end_x-2) : random(start_y+2, end_y-2);
+		sbound = v ? m[wall_i][start_y] : m[start_x][wall_i];		// checking wall boundries ->
 		ebound = v ? m[wall_i][end_y] : m[end_x][wall_i];		// wall can only come between other walls
 		tries++;
 	} while ((sbound != WALL || ebound != WALL) && tries < KILLSWITCH);
@@ -97,7 +97,7 @@ void RecDiv(mtx m, uint start_x, uint end_x, uint start_y, uint end_y, int v) {
 // makes a passage in that wall
 	uint start = v ? start_y : start_x;
 	uint length = v ? vlength : hlength;
-	make_path(m, start + 1, length - 1, wall_i, v);
+	make_path(m, start+1, length-1, wall_i, v);
 
 
 // calculating the divided areas and recursively going to both directions
@@ -120,7 +120,7 @@ int main(void) {
 
 	allocate_maze(&Maze, s);
 	maze_frame(Maze, s);
-	RecDiv(Maze, 0, s - 1, 0, s - 1, random(0, 1)); //indexing: 0..s-1
+	RecDiv(Maze, 0, s-1, 0, s-1, random(0, 1));		//indexing: 0..s-1
 	print(Maze, s);
 	deallocate_maze(Maze, s);
     
