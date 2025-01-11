@@ -13,3 +13,5 @@ Linux
 ```
 g++ -o FizzBuzz FizzBuzz.cpp -s -O3
 ```
+
+(Both programs are can be compiled with ```g++```, this is why I showed only the C++ compile command.)
