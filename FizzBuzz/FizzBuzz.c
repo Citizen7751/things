@@ -23,7 +23,7 @@ const Condition conditions[] = {
 //---------------------------------------
 //---------------------------------------
 
-int check_conditions_on(const int i) {
+int check_and_print_on(const int i) {
     int is_divisible = 0;
     for (unsigned long long ci = 0; ci < sizeof(conditions)/sizeof(conditions[0]); ci++)
         if (i % conditions[ci].n == 0) {
@@ -35,7 +35,7 @@ int check_conditions_on(const int i) {
 
 void FizzBuzz() {
     for (int i = BEGIN; i != END+(PACE/abs(PACE)); i+= PACE) {
-        if (!check_conditions_on(i)) printf("%d", i);
+        if (!check_and_print_on(i)) printf("%d", i);
         putchar('\n');
     }
 }
